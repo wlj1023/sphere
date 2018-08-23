@@ -1,0 +1,57 @@
+particle lvguang
+{
+    sprite
+    {
+        path =sphere.fbm/guangyun.png
+        width = 128
+        height = 128
+        blendMode = ADDITIVE
+        animated = false
+        looped = false
+        frameCount = 1
+        frameRandomOffset = 1
+        frameDuration = 0
+    }
+
+    particleCountMax = 5000
+    emissionRate = 6
+    ellipsoid = true
+    orbitPosition = true
+    orbitVelocity = true
+    orbitAcceleration = false
+    sizeStartMin = 0.3
+    sizeStartMax = 0.8
+    sizeEndMin = 1
+    sizeEndMax = 1
+    energyMin = 2625
+    energyMax = 3014
+    colorStart = 0, 0.990741, 0, 1
+    colorStartVar = 0, 0, 0, 0
+    colorEnd = 0.0339506, 1, 0.441358, 0.768519
+    colorEndVar = 0, 0, 0, 0
+    position = 0, 0, 0
+    positionVar = 15, 16, 1
+    velocity = 0, 3, 0
+    velocityVar = 0.401235, 0.648148, 0.0308642
+    acceleration = 0.308642, 0, 0
+    accelerationVar = 1.01852, 0.324691, 0.0308642
+    rotationPerParticleSpeedMin = 6.11111
+    rotationPerParticleSpeedMax = 3.51852
+
+    editor
+    {
+        cameraTranslation = 0.22, 2.7, 0
+        cameraZoom = 0, 0, 38.2106
+        cameraRotation = -0.896782, 0.0612355, -0.438216, 20.9537
+        sizeMax = 5
+        energyMax = 4500
+        posMax = 2
+        posVarMax = 10
+        velMax = 10
+        velVarMax = 10
+        accMax = 10
+        accVarMax = 10
+        spinSpeedMax = 10
+        rotSpeedMax = 10
+    }
+}

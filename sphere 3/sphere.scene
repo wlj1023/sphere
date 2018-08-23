@@ -1,0 +1,183 @@
+scene
+{
+    path = sphere.gpb
+
+    showDefaultLight = false
+    ambientColor = 1.0, 1.0, 1.0
+
+    modelSize =106
+    modelScale =4.0
+
+    defaultModelId = root
+
+    node Prop_point
+    {
+    }
+
+    node group_model
+    {
+        enabled=false
+        scale=0.2,0.2,0.2
+        translate=0,-5,-5
+    }
+
+    node model_body
+    {
+    }
+
+    node model_pi
+    {
+    }
+
+    node model_tui
+    {
+
+    }
+
+    node nengliangqiu
+    {
+        enabled=false
+    }
+
+    node shuihu
+    {
+        enabled=false
+    }
+
+    node pPlane_back
+    {
+         oneBoundMin = 0, 0, 0
+         oneBoundMax = 0.1, 0.1, 0.1
+    }
+
+    node pPlane_btn1
+    {
+
+        particle=lvguang.particle
+translate=0,0,10
+    }
+
+    node pPlane_btn2
+    {
+
+        scale=0.8,0.8,0.8
+        enabled=true
+    }
+
+    node pPlane_door
+    {
+         oneBoundMin = 0, 0, 0
+         oneBoundMax = 0.1, 0.1, 0.1
+    }
+        node pPlane_door1
+    {
+        translate=0.2,-0.5,0
+        scale=1.2,1.2,1.2
+        oneBoundMin = 0, 0, 0
+        oneBoundMax = 0.1, 0.1, 0.1
+    }
+
+    node pPlane_door2
+    {
+        translate=0,-2,1
+        scale=0.6,0.6,0.6
+        oneBoundMin = 0, 0, 0
+        oneBoundMax = 0.1, 0.1, 0.1
+    }
+
+    node pPlane_left
+    {
+        oneBoundMin = 0, 0, 0
+        oneBoundMax = 0.1, 0.1, 0.1
+    }
+
+    node pPlane_right
+    {
+         oneBoundMin = 0, 0, 0
+         oneBoundMax = 0.1, 0.1, 0.1
+    }
+
+    node pPlane_top
+    {
+         oneBoundMin = 0, 0, 0
+         oneBoundMax = 0.1, 0.1, 0.1
+    }
+
+    node pSphere1
+    {
+         oneBoundMin = 0, 0, 0
+         oneBoundMax = 0.1, 0.1, 0.1
+         rotate = 0, 1, 0, 0
+    }
+
+    node root
+    {
+    }
+
+    node subGroup
+    {
+
+    }
+
+    node Plane001
+    {
+    }
+
+    node boon1
+    {
+        enabled=true
+scale=1,1,1
+translate=0,-5,-3
+    }
+
+    node xa001
+    {
+    }
+
+    node xb001
+    {
+    }
+
+    node xc001
+    {
+    }
+
+    node pPlane_hangpai
+    {
+        enabled=false
+        translate=0,0,5
+    }
+
+    node pPlane_tishi1
+    {
+        scale=0.8,0.8,0.8
+        translate=0,-5.5, 8
+    }
+node pPlane_chuanyuebtn
+{
+
+translate=0,5,0
+scale=0.6,0.6,0.6
+
+}
+
+    node group_ui
+    {
+        static=true;
+        translate=0,0,0
+    }
+node pPlane_fanhuibtn
+{
+
+
+}
+
+node pPlane_jiaoshuibtn
+{
+
+translate=0,6,-14
+}
+
+
+   
+}

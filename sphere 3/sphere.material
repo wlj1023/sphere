@@ -1,0 +1,378 @@
+material textured
+{
+    sampler u_diffuseTexture
+    {
+        mipmap = false
+        wrapS = CLAMP
+        wrapT = CLAMP
+        minFilter = LINEAR
+        magFilter = LINEAR
+    }
+
+    technique
+    {
+        pass 
+        {
+            vertexShader = shaders/textured.vert
+            fragmentShader = shaders/textured.frag
+
+            u_inverseTransposeWorldViewMatrix = INVERSE_TRANSPOSE_WORLD_VIEW_MATRIX
+            u_worldViewProjectionMatrix = WORLD_VIEW_PROJECTION_MATRIX
+            
+            renderState
+            {
+                blend = true
+                blendDst = ONE_MINUS_SRC_ALPHA
+                blendSrc = SRC_ALPHA
+                cullFace = true
+                cullFaceSide = BACK
+                depthTest = true
+            }
+        }
+    }
+}
+
+material Material__29 : textured
+{
+    sampler u_diffuseTexture
+    {
+        path =sphere.fbm/mayi.png
+    }
+
+    technique
+    {
+        pass 
+        {
+            u_matrixPalette = MATRIX_PALETTE
+            
+            defines = DIRECTIONAL_LIGHT_COUNT 1;SKINNING;SKINNING_JOINT_COUNT 45
+        }
+    }
+}
+
+
+material _qiuinitialShadingGroup1 : textured
+{
+    sampler u_diffuseTexture
+    {
+        path = sphere.fbm/nengliangqiu.png
+    }
+
+    technique
+    {
+        pass 
+        {
+            u_matrixPalette = MATRIX_PALETTE
+            
+            defines = DIRECTIONAL_LIGHT_COUNT 1;SKINNING;SKINNING_JOINT_COUNT 43
+        }
+    }
+}
+
+material _xxxxlambert2SG1 : textured
+{
+    sampler u_diffuseTexture
+    {
+        path = sphere.fbm/shuihu.png
+    }
+
+    technique
+    {
+        pass 
+        {
+            u_matrixPalette = MATRIX_PALETTE
+            
+            defines = DIRECTIONAL_LIGHT_COUNT 1;SKINNING;SKINNING_JOINT_COUNT 43
+        }
+    }
+}
+
+
+material btn1 : textured
+{
+    sampler u_diffuseTexture
+    {
+        path = sphere.fbm/back-btn.png
+    }
+
+    technique
+    {
+        pass 
+        {
+            defines = DIRECTIONAL_LIGHT_COUNT 1
+            renderState
+            {
+               blend = true
+            }
+        }
+    }
+}
+
+material btn2 : textured
+{
+    sampler u_diffuseTexture
+    {
+        path = sphere.fbm/shuihu-btn.png
+    }
+    renderState
+        {
+            blend = true
+        }
+
+    technique
+    {
+        pass 
+        {
+            defines = DIRECTIONAL_LIGHT_COUNT 1
+        }
+    }
+}
+
+material btn3 : textured
+{
+
+    sampler u_diffuseTexture
+    {
+        path = sphere.fbm/shuihu-btn.png
+    }
+    renderState
+    {
+        blend = true
+    }
+
+    technique
+    {
+        pass 
+        {
+            defines = DIRECTIONAL_LIGHT_COUNT 1
+        }
+    }
+}
+
+material mask : textured
+{
+    sampler u_diffuseTexture
+    {
+        path = sphere.fbm/mask.png
+    }
+    renderState
+    {
+        blend = true
+    }
+
+    technique
+    {
+        pass 
+        {
+            defines = DIRECTIONAL_LIGHT_COUNT 1
+        }
+    }
+}
+
+material sphere : textured
+{
+    sampler u_diffuseTexture
+    {
+        path = sphere.fbm/timg.png
+    }
+
+    technique
+    {
+        pass 
+        {
+            defines = DIRECTIONAL_LIGHT_COUNT 1
+            renderState
+            {
+              cullFaceSide = FRONT
+            }
+        }
+    }
+}
+
+material window_mask : textured
+{
+    sampler u_diffuseTexture
+    {
+        path = sphere.fbm/hua/hua-animation_01.png
+    }
+
+    renderState
+    {
+       blend = true
+    }
+
+    technique
+    {
+        pass 
+        {
+            fragmentShader = mask_textured.frag
+            defines = DIRECTIONAL_LIGHT_COUNT 1;TEXTURE_DISCARD_ALPHA
+        }
+    }
+}
+
+material phong1 : textured
+{
+    sampler u_diffuseTexture
+    {
+        path = sphere.fbm/sanguang.png
+    }
+
+    technique
+    {
+        pass 
+        {
+  renderState
+        {
+	alphaBlendDst=ONE
+	alphaBlendSrc=ONE
+        }
+            u_matrixPalette = MATRIX_PALETTE
+            
+            defines = DIRECTIONAL_LIGHT_COUNT 1;SKINNING;SKINNING_JOINT_COUNT 50
+        }
+    }
+}
+material phong2 : textured
+{
+    sampler u_diffuseTexture
+    {
+        path = sphere.fbm/j_01.png
+    }
+  renderState
+        {
+            blend = true
+        }
+    technique
+    {
+        pass 
+        {
+            u_matrixPalette = MATRIX_PALETTE
+            
+            defines = DIRECTIONAL_LIGHT_COUNT 1;SKINNING;SKINNING_JOINT_COUNT 50
+        }
+    }
+}
+material phong3 : textured
+{
+    sampler u_diffuseTexture
+    {
+        path = sphere.fbm/hangpai_video.png
+    }
+
+    u_modulateAlpha = 1
+
+    technique
+    {
+        pass 
+        {
+            u_matrixPalette = MATRIX_PALETTE
+            
+            defines = DIRECTIONAL_LIGHT_COUNT 1;SKINNING;SKINNING_JOINT_COUNT 50;MODULATE_ALPHA
+
+            renderState
+            {
+               blend = true
+               depthFunc = ALWAYS
+               alphaBlendDst = ONE
+               alphaBlendSrc = ONE
+            }
+        }
+    }
+}
+material phong4 : textured
+{
+    sampler u_diffuseTexture
+    {
+        path = sphere.fbm/tishi.png
+    }
+  renderState
+        {
+            blend = true
+        }
+    technique
+    {
+        pass 
+        {
+            u_matrixPalette = MATRIX_PALETTE
+            
+            defines = DIRECTIONAL_LIGHT_COUNT 1;SKINNING;SKINNING_JOINT_COUNT 50
+        }
+    }
+}
+material phong5 : textured
+{
+    sampler u_diffuseTexture
+    {
+        path = sphere.fbm/tishi.png
+    }
+  renderState
+        {
+            blend = true
+            depthFunc = ALWAYS
+        }
+    technique
+    {
+        pass 
+        {
+            u_matrixPalette = MATRIX_PALETTE
+            
+            defines = DIRECTIONAL_LIGHT_COUNT 1;SKINNING;SKINNING_JOINT_COUNT 50
+        }
+    }
+}
+
+material phong7 : textured
+{
+    sampler u_diffuseTexture
+    {
+        path = sphere.fbm/chuanyue.png
+    }
+  renderState
+        {
+            blend = true
+        }
+    technique
+    {
+        pass 
+        {
+            u_matrixPalette = MATRIX_PALETTE
+            
+            defines = DIRECTIONAL_LIGHT_COUNT 1;SKINNING;SKINNING_JOINT_COUNT 50
+        }
+    }
+}
+material guang9 : textured
+{
+    sampler u_diffuseTexture
+    {
+        path = sphere.fbm/guang.png
+    }
+
+    technique
+    {
+        pass 
+        {
+            u_matrixPalette = MATRIX_PALETTE
+            
+            defines = DIRECTIONAL_LIGHT_COUNT 1;SKINNING;SKINNING_JOINT_COUNT 43
+        }
+    }
+}
+material xing : textured
+{
+    sampler u_diffuseTexture
+    {
+        path = sphere.fbm/xing.png
+    }
+
+    technique
+    {
+        pass 
+        {
+            u_matrixPalette = MATRIX_PALETTE
+            
+            defines = DIRECTIONAL_LIGHT_COUNT 1;SKINNING;SKINNING_JOINT_COUNT 43
+        }
+    }
+}

@@ -1,0 +1,111 @@
+animation root
+{
+    frameCount = 312
+
+    startTime = 0
+
+    stopTime = 10375
+
+    clip jingzhi
+    {
+        begin = 40
+        end =60
+        repeatCount = 1
+    }
+
+clip Default
+    {
+        begin = 0
+        end = 312
+        repeatCount = 1
+    }
+clip welcome
+{
+ 	begin = 97
+        end =130
+        repeatCount = 1
+
+}
+clip jiaoshui
+{
+ 	begin = 150
+        end =220
+        repeatCount = 1
+
+}
+clip baoqiufei
+{
+ 	begin = 280
+        end =312
+        repeatCount = 1
+
+}
+}
+animation xa001
+{
+    frameCount = 19
+
+    startTime = 41
+
+    stopTime = 625
+
+    clip Default
+    {
+        begin = 0
+        end = 19
+        repeatCount = 1
+    }
+
+}
+
+animation Plane001
+{
+    frameCount = 19
+
+    startTime = 41
+
+    stopTime = 625
+
+    clip Default
+    {
+        begin = 0
+        end = 19
+        repeatCount = 1
+    }
+
+}
+
+animation xb001
+{
+    frameCount = 19
+
+    startTime = 41
+
+    stopTime = 625
+
+    clip Default
+    {
+        begin = 0
+        end = 19
+        repeatCount = 1
+    }
+
+}
+
+animation xc001
+{
+    frameCount = 19
+
+    startTime = 41
+
+    stopTime = 625
+
+    clip Default
+    {
+        begin = 0
+        end = 19
+        repeatCount = 1
+    }
+
+}
+
